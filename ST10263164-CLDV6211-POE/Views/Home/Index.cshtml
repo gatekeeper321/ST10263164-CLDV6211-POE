@@ -3,27 +3,50 @@
 }
 
 <!--William McPetrie - ST10263164 - CLDV POE-->
+<!--References: https://www.w3schools.com/html/default.asp-->
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to KhumaloCraft Emporium</h1>
-    <h2>All Things Handmade</h2>
-    <p></p>
-</div>
+<style>
+    .home-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: transparent;
+        flex-direction: column;
+        gap: 20px;
 
-<div class="text-center">
-    <h3>KhumaloCraft offers handcrafted goods from all around the world!</h3>
-    <img src="~/Images/homepage1.jpg"></img>
-    <p></p>
-</div>
+    }
 
-<div class="text-center">
-    <h2>Why Use KhumaloCraft?</h2>
-    <p>KhumaloCraft is THE destination for handcrafted goods, all items on our website are available for sale and are all handmade. We only source goods that are handmade and of the greatest quality</p>
-</div>
+    .home-panel {
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        background-color: white;
+        opacity: 0.9;
+        text-align: center;
+        max-width: 800px;
+        margin-bottom: auto;
+    }
+</style>
 
-<div class="text-center">
-    <h2>Find Us Here Too</h2>
-    <a href="www.Facebook.com/KhumaloCraft">FaceBook</a>
-    <p></p>
-    <a href="www.Tiktok.com/KhumaloCraft">TikTok</a>
+<div class="home-container">
+    <div class="home-panel">
+        <h1 class="display-4">Welcome to KhumaloCraft Emporium</h1>
+        <h2>All Things Handmade</h2><br>
+
+        <h3>KhumaloCraft offers handcrafted goods from all around the world!</h3>
+        <img src="~/Images/homepage1.jpg"></img><br>
+    </div>
+
+    <div class="home-panel">
+        <h2>Why Use KhumaloCraft?</h2>
+        <p>KhumaloCraft is THE destination for handcrafted goods, all items on our website are available for sale and are all handmade. We only source goods that are handmade and of the greatest quality</p>
+    </div>
+
+    <div class="home-panel">
+        <h2>Find Us Here Too</h2>
+        <a href="www.Facebook.com/KhumaloCraft">FaceBook</a>
+        <p></p>
+        <a href="www.Tiktok.com/KhumaloCraft">TikTok</a>
+    </div>
 </div>

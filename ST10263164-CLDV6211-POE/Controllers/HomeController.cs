@@ -34,10 +34,32 @@ namespace ST10263164_CLDV6211_POE.Controllers
             return View();
         }
 
+        public IActionResult AddProduct()
+        {
+            return View();
+        }
+
+        public IActionResult Orders()
+        {
+            return View();
+        }
+
         public IActionResult ContactUs()
         {
             return View();
         }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        public IActionResult Signup()
+        {
+            return View();
+        }
+
+        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

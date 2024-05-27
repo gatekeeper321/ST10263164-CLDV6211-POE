@@ -1,0 +1,47 @@
+﻿@model ST10263164_CLDV6211_POE.Models.LoginModel
+@{
+}
+
+<!--William McPetrie - ST10263164 - CLDV POE-->
+<!--References: https://www.w3schools.com/html/default.asp-->
+
+<style>
+    .login-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: transparent;
+    }
+
+    .login-panel{
+        align-items: center;
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        background-color: white;
+        opacity: 0.9;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+</style>
+
+<div class="login-container">
+    <div class="login-panel">
+        <form asp-controller="Login" asp-action="Login" method="post">
+            <h1>Please enter your</h1>
+            <h1>account details below</h1><br><br>
+            <label for="email">email:<br>
+            <input type="text" name="email" placeholder="user@gmail.com" required><br><br>
+            <label for="password">password:<br>
+            <input type="password" name="userPassword" placeholder="123456789" required><br><br><br>
+            <button type="submit">Login</button><br><br>
+            <p>don't have an acount? Sign up <a href="https://localhost:7159/User/Signup">here</a>.</p>
+        </form>
+    </div>
+</div>

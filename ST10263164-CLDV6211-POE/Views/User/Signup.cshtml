@@ -1,0 +1,56 @@
+﻿@model ST10263164_CLDV6211_POE.Models.users
+@{
+}
+
+<!--William McPetrie - ST10263164 - CLDV POE-->
+<!--References: https://www.w3schools.com/html/default.asp-->
+
+<style>
+    .signup-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: transparent;
+    }
+
+    .signup-panel {
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        background-color: white;
+        align-items: center !important;
+        opacity: 0.9;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+</style>
+
+<div class="signup-container">
+    <div class="signup-panel">
+        <form asp-controller="user" asp-action="Signup" method="post">
+            <h1>Create your account</h1><br><br>
+
+            <label for="name">name:<br>
+            <input type="text" name="name" placeholder="john" required><br><br>
+
+            <label for="surname">surname:<br>
+            <input type="text" name="surname" placeholder="smith" required><br><br>
+
+            <label for="email">email:<br>
+            <input type="text" name="email" placeholder="user@gmail.com" required><br><br>
+            
+            <label for="password">password:<br>
+            <input type="password" name="userPassword" placeholder="user@gmail.com" required><br><br><br>
+            
+            <button type="submit">Sign Up</button><br><br><br>
+            
+            <p>Already have an acount? Login <a href="https://localhost:7159/Home/Login">here</a>.</p>
+        </form>
+    </div>
+</div>

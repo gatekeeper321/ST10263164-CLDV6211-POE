@@ -8,18 +8,46 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\NewFolder\NewFolder\**" />
     <Compile Remove="wwwroot\NewFolder1\**" />
     <Compile Remove="wwwroot\NewFolder\**" />
+    <Content Remove="Views\NewFolder\NewFolder\**" />
     <Content Remove="wwwroot\NewFolder1\**" />
     <Content Remove="wwwroot\NewFolder\**" />
+    <EmbeddedResource Remove="Views\NewFolder\NewFolder\**" />
     <EmbeddedResource Remove="wwwroot\NewFolder1\**" />
     <EmbeddedResource Remove="wwwroot\NewFolder\**" />
+    <None Remove="Views\NewFolder\NewFolder\**" />
     <None Remove="wwwroot\NewFolder1\**" />
     <None Remove="wwwroot\NewFolder\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Home\Index1.cshtml.cs" />
+    <Compile Remove="Views\Home\Orders.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\Index1.cshtml" />
+    <Content Remove="Views\Home\Index2.cshtml" />
+    <Content Remove="Views\Home\Index3.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\NewFolder\" />
     <Folder Include="wwwroot\Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Home\Index1.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Home\Index1.cshtml" />
   </ItemGroup>
 
 </Project>

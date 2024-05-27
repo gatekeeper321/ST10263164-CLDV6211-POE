@@ -1,0 +1,93 @@
+﻿@model List<ST10263164_CLDV6211_POE.Models.ProductDisplayModel>
+@{
+}
+<!--William McPetrie - ST10263164 - CLDV POE-->
+<!--References: https://www.w3schools.com/html/default.asp-->
+
+<style>
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .product-panel {
+        width: calc(50% - 20px);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        background-color: white;
+        text-align: center;
+        height: 800px;
+        padding: 20px;
+    }
+
+    .product-panel img{
+        border-radius: 10px 10px 0 0;
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .product-panel button{
+        border: none;
+        outline: 0;
+        padding: 10px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .heading-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 15vh;
+        background-color: transparent;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .heading-panel {
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        background-color: white;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    form {
+        margin-top: auto !important;
+        text-align: center;
+    }
+</style>
+
+<div class="heading-container">
+    <div class="heading-panel">
+        <h1>KhumaloCraft's Collection</h1>
+    </div>
+</div>
+
+<div class="product-container">
+    @if (Model != null)
+    {
+            @foreach (var product in Model)
+            {
+                <div class="product-panel">
+                    @if (product.productImg != null)
+                    {
+                        <img src="data:image/jpeg;base64,@Convert.ToBase64String(product.productImg)" />
+                    }
+                    <h2>@product.productName</h2>
+                    <p>@product.productDescription</p>
+                    <p>@product.productPrice.ToString("C")</p>
+                    <form>
+                    <button>add to cart</button>
+                    </form>
+                </div>
+            }
+    }  
+</div> 

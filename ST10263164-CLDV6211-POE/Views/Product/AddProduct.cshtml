@@ -1,0 +1,50 @@
+﻿@model ST10263164_CLDV6211_POE.Controllers.ProductController
+@{
+}
+
+<!--William McPetrie - ST10263164 - CLDV POE-->
+<!--References: https://www.w3schools.com/html/default.asp-->
+
+<style>
+    .product-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: transparent;
+    }
+
+    .product-panel {
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        background-color: white;
+        opacity: 0.9;
+    }
+
+</style>
+
+<div class="product-container">
+    <div class="product-panel">
+        <form asp-controller="Product" asp-action="AddProduct" method="post">
+            <h1>Enter product information:</h1><br><br>
+
+            <label for="productName">Product's name:</label><br>
+            <input type="text" name="productName" placeholder="dress" required><br><br>
+
+            <label for="productDescription">Description of product:</label><br>
+            <input type="text" name="productDescription" placeholder="handmade by... in..." required><br><br>
+
+            <label for="productCategory">Category of product:</label><br>
+            <input type="text" name="productCategory" placeholder="clothing/decor/jewellery" required><br><br>
+
+            <label for="productPrice">Price of product:</label><br>
+            <input type="text" name="productPrice" placeholder="2500.00" required><br><br>
+            
+            <label for="productAvailability">Is this available:</label><br>
+            <input type="text" name="productAvailability" placeholder="true/false" required><br><br><br>
+            
+            <button type="submit">Add Product</button><br><br>
+        </form>
+    </div>
+</div>

@@ -1,5 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+<!--William McPetrie - ST10263164 - CLDV POE-->
+<!--References: https://www.w3schools.com/html/default.asp-->
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +9,42 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ST10263164_CLDV6211_POE.styles.css" asp-append-version="true" />
+    <style>
+        body
+        {
+            background-image: url('/Images/website-background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .center
+        {
+            display: flex;
+            justify-content: center;
+        }
+        .nav-link-right
+        {
+            margin-left: auto;
+        }
+        .navbar
+        {
+            background-image: url('/Images/wood-navpic.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .navbar .nav-item .nav-link
+        {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white !important;
+        }
+        .navbar-brand
+        {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            font-weight: bold;
+            color: white !important;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,10 +64,19 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="MyWork">My Work</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="MyWork">My Work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="AddProduct">Add Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Orders">View Orders</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+                        </li>
+                        <li class="nav-item nav-link-right">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Login</a>
                         </li>
                     </ul>
                 </div>
